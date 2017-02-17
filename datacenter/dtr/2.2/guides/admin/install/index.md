@@ -49,6 +49,15 @@ Where the `--ucp-node` is the hostname of the UCP node where you want to deploy
 DTR. `--ucp-insecure-tls` tells the installer to trust the TLS certificates used
 by UCP.
 
+The installer script will prompt you for some additional information, such as: 
+  * `dtr-external-url` - This is the location that DTR can be reached via docker clients. (ie `docker login <dtr ipaddress/url>`)
+      If you are installing DTR behind a loadbalancer this would be the IP address or DNS name of your load balancer. 
+      If you are installing DTR on a single node, this would be the "external ip" of the node. 
+        > *Note* AWS has a concept of internal and external IP addresses. If you use the internal IP, single sign on between UCP and DTR can get broken. 
+
+
+If you are installing DTR behind a loadbalancer you will want to use the `--dtr-external-url` flag. 
+
 The install command has other flags for customizing DTR at install time.
 Check the [reference documentation to learn more](../../../reference/cli/install.md).
 
