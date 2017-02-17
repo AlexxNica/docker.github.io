@@ -59,8 +59,6 @@ The installer script will prompt you for some additional information, such as:
   * `ucp-username` - the username you used to setup UCP in step 2.
   * `ucp-password` - the password you used to setup UCP in step 2. 
 
-If you are installing DTR behind a loadbalancer you will want to use the `--dtr-external-url` flag. 
-
 The install command has other flags for customizing DTR at install time.
 Check the [reference documentation to learn more](../../../reference/cli/install.md).
 
